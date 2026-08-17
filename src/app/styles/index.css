@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "./tokens/index.css";
+
+html,
+body {
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
