@@ -1,2 +1,2 @@
-import Onboard from "@/components/components/Page/Onboard";
-export default Onboard;
+import { OnboardPage } from "@/components/Page/OnboardPage";
+export default OnboardPage;
