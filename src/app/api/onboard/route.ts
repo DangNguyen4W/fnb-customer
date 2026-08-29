@@ -7,7 +7,7 @@ interface OnboardingStep {
   image: string;
 }
 
-const onboardingSteps = [
+export const onboardingSteps = [
   {
     id: 1,
     title: "Welcome to our platform",
