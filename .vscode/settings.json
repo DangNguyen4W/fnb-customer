@@ -8,7 +8,5 @@
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "editor.cursorSmoothCaretAnimation": "on",
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "(?:'|\"|`)([^'\"`]*)"]
-  ]
+  "tailwindCSS.classFunctions": ["cva", "cx"]
 }

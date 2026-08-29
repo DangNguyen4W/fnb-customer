@@ -1,0 +1,4 @@
+:root {
+  /* ignore theme (temporary)  */
+  --theme-app-rating: var(--pre-colors-yellow-400);
+}

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 import { cva, VariantProps } from "class-variance-authority";
 import { ReactNode } from "react";
 
@@ -11,9 +11,9 @@ const flexBoxVariants = cva("flex", {
 
     gap: {
       none: "gap-ds-gap-none",
-      "1": "gap-ds-gap-lv-1",
-      "2": "gap-ds-gap-lv-2",
-      "3": "gap-ds-gap-lv-3",
+      1: "gap-ds-gap-lv-1",
+      2: "gap-ds-gap-lv-2",
+      3: "gap-ds-gap-lv-3",
     },
 
     align: {
@@ -31,8 +31,6 @@ const flexBoxVariants = cva("flex", {
 
   defaultVariants: {
     direction: "row",
-    align: "top-left",
-    gap: "none",
   },
 
   compoundVariants: [
@@ -139,19 +137,25 @@ const flexBoxVariants = cva("flex", {
 interface FlexBoxProps {
   children?: ReactNode;
   className?: string;
-  col: boolean;
+  col?: boolean;
 }
 
 const FlexBox = ({
   children,
   className,
-  align,
+  align = "top-left",
+  gap,
   col,
 }: FlexBoxProps & Omit<VariantProps<typeof flexBoxVariants>, "direction">) => {
   return (
     <div
       className={cn(
-        flexBoxVariants({ direction: col ? "col" : "row", className, align }),
+        flexBoxVariants({
+          direction: col ? "col" : "row",
+          className,
+          align,
+          gap,
+        }),
       )}
     >
       {children}

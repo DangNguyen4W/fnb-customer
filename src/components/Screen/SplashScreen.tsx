@@ -1,6 +1,6 @@
 import { Typography } from "../Atoms/Typography";
 import { PageLayout } from "../Layouts/PageLayout";
-import { FlexBox } from "../Template/FlexBox";
+import { FlexBox } from "../Atoms/FlexBox";
 
 function SplashScreen() {
   return (

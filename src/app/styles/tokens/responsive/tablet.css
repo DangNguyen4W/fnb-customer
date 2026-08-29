@@ -22,6 +22,7 @@
     --res-font-size-content-support-medium: var(--pre-font-size-14);
     --res-padding-pb-page: var(--pre-padding-32);
     --res-padding-pt-page: var(--pre-padding-16);
+    --res-padding-page: var(--pre-padding-16);
     --res-padding-px-page: var(--pre-padding-16);
     --res-padding-none: var(--pre-padding-0);
     --res-gap-none: var(--pre-gap-0);
@@ -34,10 +35,10 @@
     --res-border-none: var(--pre-scale-0);
     --res-font-size-title-level-5: var(--pre-font-size-18);
     --res-font-size-title-level-6: var(--pre-font-size-16);
-    --res-font-size-action-tiny: var(--pre-font-size-10);
-    --res-font-size-action-small: var(--pre-font-size-12);
-    --res-font-size-action-medium: var(--pre-font-size-14);
-    --res-font-size-action-large: var(--pre-font-size-16);
+    --res-font-size-action-tiny: var(--pre-font-size-12);
+    --res-font-size-action-small: var(--pre-font-size-14);
+    --res-font-size-action-medium: var(--pre-font-size-16);
+    --res-font-size-action-large: var(--pre-font-size-24);
     --res-font-size-content-body-tiny: var(--pre-font-size-12);
     --res-font-size-content-body-small: var(--pre-font-size-14);
     --res-font-size-content-body-medium: var(--pre-font-size-16);
@@ -46,6 +47,10 @@
     --res-font-size-content-label-small: var(--pre-font-size-12);
     --res-font-size-content-label-tiny: var(--pre-font-size-10);
     --res-font-size-content-label-large: var(--pre-font-size-16);
+    --res-font-size-control-large: var(--pre-font-size-24);
+    --res-font-size-control-medium: var(--pre-font-size-16);
+    --res-font-size-control-small: var(--pre-font-size-14);
+    --res-font-size-control-small: var(--pre-font-size-12);
     --res-radius-4xl: var(--pre-radius-32);
     --res-padding-xs: var(--pre-padding-2);
     --res-padding-xs-: var(--pre-padding-0);
@@ -71,5 +76,13 @@
     --res-font-size-weight-medium: var(--pre-font-weight-medium);
     --res-font-size-weight-semibold: var(--pre-font-weight-semibold);
     --res-font-size-weight-bold: var(--pre-font-weight-bold);
+    --res-shadow-surface: var(--pre-shadow-x-0) var(--pre-shadow-y-1)
+      var(--pre-shadow-blur-4) var(--pre-shadow-spread-0);
+
+    --res-shadow-floating: var(--pre-shadow-x-0) var(--pre-shadow-y-4)
+      var(--pre-shadow-blur-8) var(--pre-shadow-spread-0);
+
+    --res-shadow-overlay: var(--pre-shadow-x-0) var(--pre-shadow-y-8)
+      var(--pre-shadow-blur-16) var(--pre-shadow-spread-0);
   }
 }

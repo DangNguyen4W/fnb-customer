@@ -10,7 +10,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`h-dvh w-dvh overflow-hidden antialiased theme-light`}
+      className={`h-dvh w-dvh overflow-hidden antialiased theme-light font-ds-family-primary`}
     >
       <body className="h-full w-full overflow-hidden">{children}</body>
     </html>
