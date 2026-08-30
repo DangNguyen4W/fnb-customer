@@ -9,3 +9,5 @@ export const IconsRegistry = {
   Star,
   Plus,
 };
+
+export type IconName = keyof typeof IconsRegistry;

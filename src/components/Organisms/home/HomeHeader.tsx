@@ -7,14 +7,19 @@ import { cn } from "@/lib/cn";
 
 interface HomeHeaderProps {
   className?: string;
+  preventOverScroll?: boolean;
 }
 
-function HomeHeader({ className }: HomeHeaderProps) {
+function HomeHeader({ className, preventOverScroll }: HomeHeaderProps) {
   return (
     <FlexBox
       col
       className={cn(
-        "bg-ds-cl-bg-brand-primary-main rounded-b-ds-3xl p-ds-pd-2xl text-ds-cl-text-base-inverse",
+        "bg-ds-cl-bg-brand-primary-main rounded-b-ds-3xl p-ds-pd-2xl text-ds-cl-text-base-inverse relative",
+        {
+          "after:block after:absolute after:w-full after:top-0          after:translate-y-[calc(-100%+2px)] after:h-80 after:left-0 after:bg-[inherit]":
+            preventOverScroll,
+        },
         className,
       )}
       gap={3}

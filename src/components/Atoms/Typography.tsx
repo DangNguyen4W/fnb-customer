@@ -11,7 +11,7 @@ const typographyVariantValues = {
   "title-level-2": "text-ds-size-title-level-2 font-ds-w-semibold",
   "title-level-3": "text-ds-size-title-level-3 font-ds-w-semibold",
   "title-level-4": "text-ds-size-title-level-4 font-ds-w-medium",
-  "title-level-5": "text-ds-size-title-level-5 font-ds-w-semibold",
+  "title-level-5": "text-ds-size-title-level-5 font-ds-w-medium",
   "title-level-6": "text-ds-size-title-level-6 font-ds-w-medium",
   "content-body-large": "text-ds-size-content-body-large font-ds-w-default",
   "content-body-medium": "text-ds-size-content-body-medium font-ds-w-default",

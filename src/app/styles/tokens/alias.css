@@ -546,6 +546,9 @@
     var(--ds-shadow-color, var(--color-ds-cl-effect-base-default));
   /* App Business */
   --color-ds-cl-app-rating: var(--theme-app-rating);
+  /* Breakpoint - can not use css variable */
+  --breakpoint-ds-tablet: 48rem;
+  --breakpoint-ds-desktop: 64rem;
 }
 
 @utility shadow-ds-cl-effect-base-none {

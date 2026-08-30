@@ -3,14 +3,16 @@ import { ScrollArea } from "../Atoms/ScrollArea";
 import { PageLayout } from "../Layouts/PageLayout";
 import HomeHeader from "../Organisms/home/HomeHeader";
 import HomeMain from "../Organisms/home/HomeMain";
+import BottomNavbar from "../Organisms/navigation/BottomNavbar";
 
 function HomeScreen() {
   return (
     <PageLayout>
       <ScrollArea className="h-full">
-        <HomeHeader className="sticky top-0 z-ds-raised" />
+        <HomeHeader className="sticky top-0 z-ds-raised" preventOverScroll />
         <HomeMain />
       </ScrollArea>
+      <BottomNavbar />
     </PageLayout>
   );
 }
