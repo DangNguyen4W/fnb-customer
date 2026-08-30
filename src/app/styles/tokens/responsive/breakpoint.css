@@ -1,0 +1,4 @@
+:root {
+  --res-breakpoint-tablet: 48rem; /* 768px */
+  --res-breakpoint-desktop: 64rem; /* 1024px */
+}

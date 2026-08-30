@@ -1,8 +1,8 @@
 import { cn } from "@/lib/cn";
-import { IconsRegistry } from "./registry";
+import { IconName, IconsRegistry } from "./registry";
 
 interface IconProps {
-  name: keyof typeof IconsRegistry;
+  name: IconName;
   size?: 3 | 4 | 5 | 6 | 8 | 9;
   width?: number;
   height?: number;

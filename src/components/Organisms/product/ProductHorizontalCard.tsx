@@ -25,12 +25,12 @@ function ProductHorizontalCard({ product }: ProductHorizontalCardProps) {
         <Typography variant="title-level-5">
           {product?.name ?? "Cheese Sizzling"}
         </Typography>
-        <FlexBox align={"center-left"} className="gap-1">
+        <FlexBox
+          align={"center-left"}
+          className="gap-1 text-ds-cl-text-base-sub"
+        >
           <Icon name="Clock4" size={4} />
-          <Typography
-            variant="content-body-small"
-            className="text-ds-cl-text-base-sub"
-          >
+          <Typography variant="content-body-small">
             {"15-30 min • 1.3 km"}
           </Typography>
         </FlexBox>

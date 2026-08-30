@@ -1,7 +1,5 @@
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 48rem) {
   :root {
-    --res-viewport-width: 48rem;
-    --res-viewport-height: 61.375rem;
     --res-font-size-title-display-medium: var(--pre-font-size-48);
     --res-font-size-title-level-2: var(--pre-font-size-28);
     --res-font-size-title-level-1: var(--pre-font-size-36);
