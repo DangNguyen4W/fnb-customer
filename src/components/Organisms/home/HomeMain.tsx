@@ -1,14 +1,15 @@
 import { FlexBox } from "@/components/Atoms/FlexBox";
-import TitleGroup from "@/components/Molecules/TitleGroup";
 import ProductHorizontalCard from "../product/ProductHorizontalCard";
-import { Typography } from "@/components/Atoms/Typography";
+import TitleLevels from "@/components/Molecules/TitleLevels";
 
 function HomeMain() {
   return (
-    <FlexBox col gap={2} className="p-ds-pd-px-page">
-      <TitleGroup>
-        <Typography variant="title-level-2">Meals</Typography>
-      </TitleGroup>
+    <FlexBox col gap={2} className="p-ds-pd-x-page">
+      <FlexBox>
+        <TitleLevels level={2} emphasis={"emphasized"}>
+          Meals
+        </TitleLevels>
+      </FlexBox>
       <FlexBox col gap={3} className="w-full">
         <ProductHorizontalCard />
         <ProductHorizontalCard />

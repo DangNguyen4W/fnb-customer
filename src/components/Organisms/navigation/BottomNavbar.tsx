@@ -1,7 +1,3 @@
-import { routes } from "@/app/routes";
-
-function BottomNavbar() {
-  console.log(routes.product.detail(123));
-}
+function BottomNavbar() {}
 
 export default BottomNavbar;

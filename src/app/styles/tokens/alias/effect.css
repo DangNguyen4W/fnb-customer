@@ -1,0 +1,82 @@
+@theme inline {
+  /* Box Shadow */
+  --shadow-ds-surface: var(--res-shadow-surface)
+    var(--ds-shadow-color, var(--color-ds-cl-effect-base-default));
+  --shadow-ds-floating: var(--res-shadow-floating)
+    var(--ds-shadow-color, var(--color-ds-cl-effect-base-default));
+  --shadow-ds-overlay: var(--res-shadow-overlay)
+    var(--ds-shadow-color, var(--color-ds-cl-effect-base-default));
+}
+
+@utility shadow-ds-cl-effect-base-none {
+  --ds-shadow-color: var(--color-ds-cl-effect-base-none);
+}
+@utility shadow-ds-cl-effect-base-default {
+  --ds-shadow-color: var(--color-ds-cl-effect-base-default);
+}
+@utility shadow-ds-cl-effect-base-disable {
+  --ds-shadow-color: var(--color-ds-cl-effect-base-disable);
+}
+@utility shadow-ds-cl-effect-base-inverse {
+  --ds-shadow-color: var(--color-ds-cl-effect-base-inverse);
+}
+@utility shadow-ds-cl-effect-brand-primary-ultra-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-brand-primary-ultra-light);
+}
+@utility shadow-ds-cl-effect-brand-primary-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-brand-primary-light);
+}
+@utility shadow-ds-cl-effect-brand-primary-main {
+  --ds-shadow-color: var(--color-ds-cl-effect-brand-primary-main);
+}
+@utility shadow-ds-cl-effect-brand-primary-dark {
+  --ds-shadow-color: var(--color-ds-cl-effect-brand-primary-dark);
+}
+@utility shadow-ds-cl-effect-brand-secondary-ultra-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-brand-secondary-ultra-light);
+}
+@utility shadow-ds-cl-effect-brand-secondary-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-brand-secondary-light);
+}
+@utility shadow-ds-cl-effect-brand-secondary-main {
+  --ds-shadow-color: var(--color-ds-cl-effect-brand-secondary-main);
+}
+@utility shadow-ds-cl-effect-brand-secondary-dark {
+  --ds-shadow-color: var(--color-ds-cl-effect-brand-secondary-dark);
+}
+@utility shadow-ds-cl-effect-support-success-ultra-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-success-ultra-light);
+}
+@utility shadow-ds-cl-effect-support-success-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-success-light);
+}
+@utility shadow-ds-cl-effect-support-success-main {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-success-main);
+}
+@utility shadow-ds-cl-effect-support-info-ultra-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-info-ultra-light);
+}
+@utility shadow-ds-cl-effect-support-info-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-info-light);
+}
+@utility shadow-ds-cl-effect-support-info-main {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-info-main);
+}
+@utility shadow-ds-cl-effect-support-warn-ultra-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-warn-ultra-light);
+}
+@utility shadow-ds-cl-effect-support-warn-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-warn-light);
+}
+@utility shadow-ds-cl-effect-support-warn-main {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-warn-main);
+}
+@utility shadow-ds-cl-effect-support-error-ultra-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-error-ultra-light);
+}
+@utility shadow-ds-cl-effect-support-error-light {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-error-light);
+}
+@utility shadow-ds-cl-effect-support-error-main {
+  --ds-shadow-color: var(--color-ds-cl-effect-support-error-main);
+}

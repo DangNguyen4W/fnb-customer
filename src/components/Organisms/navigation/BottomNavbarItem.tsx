@@ -15,7 +15,7 @@ interface BottomNavbarItemProps {
 function BottomNavbarItem({ data }: BottomNavbarItemProps) {
   const { label } = data;
 
-  return <FlexBox col></FlexBox>;
+  return <FlexBox col>{label}</FlexBox>;
 }
 
 export default BottomNavbarItem;

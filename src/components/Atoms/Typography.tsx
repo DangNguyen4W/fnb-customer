@@ -62,7 +62,9 @@ const HTMLTagMapping: Partial<Record<TypographyVariant, ElementType>> = {
   "title-level-6": "h6",
 };
 
-interface TypoGraphyProps extends VariantProps<typeof typographyVariants> {
+export interface TypoGraphyProps extends VariantProps<
+  typeof typographyVariants
+> {
   children?: ReactNode;
   className?: string;
   as?: ElementType;
@@ -101,9 +103,10 @@ function Typography({
   variant = "content-body-medium",
   as: As = variant ? (HTMLTagMapping[variant] ?? "span") : "span",
   className,
+  ...rest
 }: TypoGraphyProps) {
   return (
-    <As className={cn(typographyVariants({ variant, className }))}>
+    <As {...rest} className={cn(typographyVariants({ variant, className }))}>
       {children}
     </As>
   );

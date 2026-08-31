@@ -3,7 +3,7 @@ import { IconName, IconsRegistry } from "./registry";
 
 interface IconProps {
   name: IconName;
-  size?: 3 | 4 | 5 | 6 | 8 | 9;
+  size?: 3 | 4 | 5 | 6 | 8 | 9 | 10;
   width?: number;
   height?: number;
   className?: string;

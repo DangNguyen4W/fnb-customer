@@ -1,0 +1,4 @@
+@theme inline {
+  /* App Business */
+  --color-ds-cl-app-rating: var(--theme-app-rating);
+}

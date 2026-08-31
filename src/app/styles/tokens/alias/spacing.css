@@ -1,0 +1,119 @@
+@theme inline {
+  /* Radius / Control */
+  --radius-ds-control-tiny: var(--res-radius-control-tiny);
+  --radius-ds-control-sm: var(--res-radius-control-sm);
+  --radius-ds-control: var(--res-radius-control);
+  --radius-ds-control-lg: var(--res-radius-control-lg);
+
+  /* Radius / Control Limited */
+  --radius-ds-control-limited-tiny: min(
+    var(--res-radius-control-tiny-max),
+    var(--res-radius-control-tiny)
+  );
+  --radius-ds-control-limited-sm: min(
+    var(--res-radius-control-sm-max),
+    var(--res-radius-control-sm)
+  );
+  --radius-ds-control-limited: min(
+    var(--res-radius-control-max),
+    var(--res-radius-control)
+  );
+  --radius-ds-control-limited-lg: min(
+    var(--res-radius-control-lg-max),
+    var(--res-radius-control-lg)
+  );
+
+  /* Radius / Item */
+  --radius-ds-item-tiny: var(--res-radius-item-tiny);
+  --radius-ds-item-sm: var(--res-radius-item-sm);
+  --radius-ds-item: var(--res-radius-item);
+  --radius-ds-item-lg: var(--res-radius-item-lg);
+
+  /* Radius / Surface */
+  --radius-ds-surface-tiny: var(--res-radius-surface-tiny);
+  --radius-ds-surface-sm: var(--res-radius-surface-sm);
+  --radius-ds-surface: var(--res-radius-surface);
+  --radius-ds-surface-lg: var(--res-radius-surface-lg);
+
+  /* Radius / Full */
+  --radius-ds-full: var(--res-radius-full);
+
+  /* Gap */
+  --spacing-ds-gap-none: var(--res-gap-none);
+  --spacing-ds-gap-lv-1: var(--res-gap-lv-1);
+  --spacing-ds-gap-lv-2: var(--res-gap-lv-2);
+  --spacing-ds-gap-lv-3: var(--res-gap-lv-3);
+  --spacing-ds-gap-page: var(--res-gap-page);
+
+  /* Padding / Page */
+  --spacing-ds-pd-page: var(--res-padding-page);
+  --spacing-ds-pd-t-page: var(--res-padding-t-page);
+  --spacing-ds-pd-x-page: var(--res-padding-x-page);
+  --spacing-ds-pd-b-page: var(--res-padding-b-page);
+
+  /* Surface */
+
+  /* sm */
+  --spacing-ds-pd-surface-sm: var(--res-padding-surface-sm);
+  --spacing-ds-pd-surface-x-sm: var(--res-padding-surface-x-sm);
+  --spacing-ds-pd-surface-y-sm: var(--res-padding-surface-y-sm);
+
+  /* default */
+  --spacing-ds-pd-surface: var(--res-padding-surface);
+  --spacing-ds-pd-surface-x: var(--res-padding-surface-x);
+  --spacing-ds-pd-surface-y: var(--res-padding-surface-y);
+
+  /* lg */
+  --spacing-ds-pd-surface-lg: var(--res-padding-surface-lg);
+  --spacing-ds-pd-surface-x-lg: var(--res-padding-surface-x-lg);
+  --spacing-ds-pd-surface-y-lg: var(--res-padding-surface-y-lg);
+
+  /* Item */
+
+  /* tiny */
+  --spacing-ds-pd-item-tiny: var(--res-padding-item-tiny);
+  --spacing-ds-pd-item-x-tiny: var(--res-padding-item-x-tiny);
+  --spacing-ds-pd-item-y-tiny: var(--res-padding-item-y-tiny);
+
+  /* sm */
+  --spacing-ds-pd-item-sm: var(--res-padding-item-sm);
+  --spacing-ds-pd-item-x-sm: var(--res-padding-item-x-sm);
+  --spacing-ds-pd-item-y-sm: var(--res-padding-item-y-sm);
+
+  /* default */
+  --spacing-ds-pd-item: var(--res-padding-item);
+  --spacing-ds-pd-item-x: var(--res-padding-item-x);
+  --spacing-ds-pd-item-y: var(--res-padding-item-y);
+
+  /* lg */
+  --spacing-ds-pd-item-lg: var(--res-padding-item-lg);
+  --spacing-ds-pd-item-x-lg: var(--res-padding-item-x-lg);
+  --spacing-ds-pd-item-y-lg: var(--res-padding-item-y-lg);
+
+  /* Control */
+
+  /* tiny */
+  --spacing-ds-pd-control-tiny: var(--res-padding-control-tiny);
+  --spacing-ds-pd-control-x-tiny: var(--res-padding-control-x-tiny);
+  --spacing-ds-pd-control-y-tiny: var(--res-padding-control-y-tiny);
+
+  /* sm */
+  --spacing-ds-pd-control-sm: var(--res-padding-control-sm);
+  --spacing-ds-pd-control-x-sm: var(--res-padding-control-x-sm);
+  --spacing-ds-pd-control-y-sm: var(--res-padding-control-y-sm);
+
+  /* default */
+  --spacing-ds-pd-control: var(--res-padding-control);
+  --spacing-ds-pd-control-x: var(--res-padding-control-x);
+  --spacing-ds-pd-control-y: var(--res-padding-control-y);
+
+  /* lg */
+  --spacing-ds-pd-control-lg: var(--res-padding-control-lg);
+  --spacing-ds-pd-control-x-lg: var(--res-padding-control-x-lg);
+  --spacing-ds-pd-control-y-lg: var(--res-padding-control-y-lg);
+
+  /* Border */
+  --border-width-ds-width-none: var(--res-border-none);
+  --border-width-ds-width-default: var(--res-border-default);
+  --border-width-ds-width-emphasis: var(--res-border-emphasis);
+}

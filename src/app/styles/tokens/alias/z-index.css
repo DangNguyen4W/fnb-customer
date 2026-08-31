@@ -1,0 +1,14 @@
+@theme inline {
+  --z-index-ds-base: var(--pre-z-index-0);
+  --z-index-ds-raised: var(--pre-z-index-1);
+  --z-index-ds-menu: var(--pre-z-index-100);
+  --z-index-ds-sticky: var(--pre-z-index-200);
+  --z-index-ds-fixed: var(--pre-z-index-300);
+  --z-index-ds-navigation: var(--pre-z-index-400);
+  --z-index-ds-overlay: var(--pre-z-index-500);
+  --z-index-ds-modal: var(--pre-z-index-600);
+  --z-index-ds-dialog: var(--pre-z-index-700);
+  --z-index-ds-tooltip: var(--pre-z-index-800);
+  --z-index-ds-toast: var(--pre-z-index-900);
+  --z-index-ds-loading: var(--pre-z-index-1000);
+}
