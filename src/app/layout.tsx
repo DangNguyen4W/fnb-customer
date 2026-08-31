@@ -12,7 +12,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`h-dvh w-dvh overflow-hidden antialiased theme-light font-ds-family-primary`}
     >
-      <body className="h-full w-full overflow-hidden">{children}</body>
+      <body className="h-full w-full overflow-hidden bg-ds-cl-bg-base-default">
+        {children}
+      </body>
     </html>
   );
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ProductData } from "./product";
 import Icon from "@/components/Atoms/Icon";
 import { Button } from "@/components/Atoms/Button";
+import TitleLevels from "@/components/Molecules/TitleLevels";
 
 interface ProductHorizontalCardProps {
   product?: ProductData;
@@ -11,20 +12,20 @@ interface ProductHorizontalCardProps {
 
 function ProductHorizontalCard({ product }: ProductHorizontalCardProps) {
   return (
-    <div className="gap-3 w-full shadow-ds-surface rounded-ds-lg grid grid-cols-[auto_1fr] p-ds-pd-md">
+    <div className="gap-3 w-full shadow-ds-surface rounded-ds-item-sm grid grid-cols-[auto_1fr] p-ds-pd-item-tiny">
       <div className="aspect-square h-full relative">
         <Image
           src={"https://swiperjs.com/demos/images/abstract-1.jpg"}
           alt=""
           fill
           objectFit="cover"
-          className="rounded-ds-md"
+          className="rounded-ds-item-tiny"
         />
       </div>
       <FlexBox col>
-        <Typography variant="title-level-5">
+        <TitleLevels level={5} emphasis={"moderate"}>
           {product?.name ?? "Cheese Sizzling"}
-        </Typography>
+        </TitleLevels>
         <FlexBox
           align={"center-left"}
           className="gap-1 text-ds-cl-text-base-sub"

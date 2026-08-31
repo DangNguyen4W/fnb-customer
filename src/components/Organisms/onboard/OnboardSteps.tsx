@@ -67,7 +67,9 @@ function OnboardSteps({ steps }: OnboardStepsProps) {
           currentIndex={currentStep}
           total={steps?.length}
         />
-        <Button onClick={handleContinue}>Continue</Button>
+        <Button onClick={handleContinue} fullWidth>
+          Continue
+        </Button>
       </FlexBox>
     </div>
   );

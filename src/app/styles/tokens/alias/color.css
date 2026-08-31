@@ -1,0 +1,142 @@
+@theme inline {
+  /* Color / Text */
+  --color-ds-cl-text-base-default: var(--theme-base-primary);
+  --color-ds-cl-text-base-sub: var(--theme-neutral-400);
+  --color-ds-cl-text-base-disabled: var(--theme-neutral-200);
+  --color-ds-cl-text-base-inverse: var(--theme-base-inverse);
+
+  --color-ds-cl-text-brand-primary-main: var(--theme-brand-primary-main);
+  --color-ds-cl-text-brand-primary-hover: var(--theme-brand-primary-hover);
+  --color-ds-cl-text-brand-primary-pressed: var(--theme-brand-primary-pressed);
+  --color-ds-cl-text-brand-primary-contrast: var(
+    --theme-brand-primary-contrast-text
+  );
+
+  --color-ds-cl-text-brand-secondary-main: var(--theme-brand-secondary-main);
+  --color-ds-cl-text-brand-secondary-hover: var(--theme-brand-secondary-hover);
+  --color-ds-cl-text-brand-secondary-pressed: var(
+    --theme-brand-secondary-pressed
+  );
+  --color-ds-cl-text-brand-secondary-contrast: var(
+    --theme-brand-secondary-contrast-text
+  );
+
+  --color-ds-cl-text-support-success: var(--theme-support-success-main);
+  --color-ds-cl-text-support-info: var(--theme-support-info-main);
+  --color-ds-cl-text-support-warn: var(--theme-support-warn-main);
+  --color-ds-cl-text-support-error: var(--theme-support-error-main);
+
+  /* Color / Background */
+  --color-ds-cl-bg-base-none: var(--theme-base-transparent);
+  --color-ds-cl-bg-base-default: var(--theme-base-inverse);
+  --color-ds-cl-bg-base-disabled: var(--theme-neutral-100);
+  --color-ds-cl-bg-base-inverse: var(--theme-base-primary);
+
+  --color-ds-cl-bg-brand-primary-ultra-light: var(
+    --theme-brand-primary-ultra-light
+  );
+  --color-ds-cl-bg-brand-primary-light: var(--theme-brand-primary-light);
+  --color-ds-cl-bg-brand-primary-main: var(--theme-brand-primary-main);
+  --color-ds-cl-bg-brand-primary-hover: var(--theme-brand-primary-hover);
+  --color-ds-cl-bg-brand-primary-pressed: var(--theme-brand-primary-pressed);
+
+  --color-ds-cl-bg-brand-secondary-ultra-light: var(
+    --theme-brand-secondary-ultra-light
+  );
+  --color-ds-cl-bg-brand-secondary-light: var(--theme-brand-secondary-light);
+  --color-ds-cl-bg-brand-secondary-main: var(--theme-brand-secondary-main);
+  --color-ds-cl-bg-brand-secondary-hover: var(--theme-brand-secondary-hover);
+  --color-ds-cl-bg-brand-secondary-pressed: var(
+    --theme-brand-secondary-pressed
+  );
+
+  --color-ds-cl-bg-support-success-ultra-light: var(
+    --theme-support-success-ultra-light
+  );
+  --color-ds-cl-bg-support-success-light: var(--theme-support-success-light);
+  --color-ds-cl-bg-support-success-main: var(--theme-support-success-main);
+
+  --color-ds-cl-bg-support-info-ultra-light: var(
+    --theme-support-info-ultra-light
+  );
+  --color-ds-cl-bg-support-info-light: var(--theme-support-info-light);
+  --color-ds-cl-bg-support-info-main: var(--theme-support-info-main);
+
+  --color-ds-cl-bg-support-warn-ultra-light: var(
+    --theme-support-warn-ultra-light
+  );
+  --color-ds-cl-bg-support-warn-light: var(--theme-support-warn-light);
+  --color-ds-cl-bg-support-warn-main: var(--theme-support-warn-main);
+
+  --color-ds-cl-bg-support-error-ultra-light: var(
+    --theme-support-error-ultra-light
+  );
+  --color-ds-cl-bg-support-error-light: var(--theme-support-error-light);
+  --color-ds-cl-bg-support-error-main: var(--theme-support-error-main);
+
+  /* Color / Border */
+  --color-ds-cl-border-base-none: var(--theme-base-transparent);
+  --color-ds-cl-border-base-default: var(--theme-neutral-300);
+
+  --color-ds-cl-border-brand-primary-main: var(--theme-brand-primary-main);
+  --color-ds-cl-border-brand-primary-hover: var(--theme-brand-primary-hover);
+  --color-ds-cl-border-brand-secondary-main: var(--theme-brand-secondary-main);
+  --color-ds-cl-border-brand-secondary-hover: var(
+    --theme-brand-secondary-hover
+  );
+
+  --color-ds-cl-border-support-success: var(--theme-support-success-main);
+  --color-ds-cl-border-support-info: var(--theme-support-info-main);
+  --color-ds-cl-border-support-warn: var(--theme-support-warn-main);
+  --color-ds-cl-border-support-error: var(--theme-support-error-main);
+  --color-ds-cl-border-support-disabled: var(--theme-neutral-100);
+  --color-ds-cl-border-support-active: var(--theme-brand-primary-main);
+
+  /* Color / Effect */
+  --color-ds-cl-effect-base-none: var(--theme-base-transparent);
+  --color-ds-cl-effect-base-default: var(--theme-neutral-100);
+  --color-ds-cl-effect-base-disable: var(--theme-base-transparent);
+  --color-ds-cl-effect-base-inverse: var(--theme-base-inverse);
+
+  --color-ds-cl-effect-brand-primary-ultra-light: var(
+    --theme-brand-primary-ultra-light
+  );
+  --color-ds-cl-effect-brand-primary-light: var(--theme-brand-primary-light);
+  --color-ds-cl-effect-brand-primary-main: var(--theme-brand-primary-main);
+  --color-ds-cl-effect-brand-primary-dark: var(--theme-brand-primary-dark);
+
+  --color-ds-cl-effect-brand-secondary-ultra-light: var(
+    --theme-brand-secondary-ultra-light
+  );
+  --color-ds-cl-effect-brand-secondary-light: var(
+    --theme-brand-secondary-light
+  );
+  --color-ds-cl-effect-brand-secondary-main: var(--theme-brand-secondary-main);
+  --color-ds-cl-effect-brand-secondary-dark: var(--theme-brand-secondary-dark);
+
+  --color-ds-cl-effect-support-success-ultra-light: var(
+    --theme-support-success-ultra-light
+  );
+  --color-ds-cl-effect-support-success-light: var(
+    --theme-support-success-light
+  );
+  --color-ds-cl-effect-support-success-main: var(--theme-support-success-main);
+
+  --color-ds-cl-effect-support-info-ultra-light: var(
+    --theme-support-info-ultra-light
+  );
+  --color-ds-cl-effect-support-info-light: var(--theme-support-info-light);
+  --color-ds-cl-effect-support-info-main: var(--theme-support-info-main);
+
+  --color-ds-cl-effect-support-warn-ultra-light: var(
+    --theme-support-warn-ultra-light
+  );
+  --color-ds-cl-effect-support-warn-light: var(--theme-support-warn-light);
+  --color-ds-cl-effect-support-warn-main: var(--theme-support-warn-main);
+
+  --color-ds-cl-effect-support-error-ultra-light: var(
+    --theme-support-error-ultra-light
+  );
+  --color-ds-cl-effect-support-error-light: var(--theme-support-error-light);
+  --color-ds-cl-effect-support-error-main: var(--theme-support-error-main);
+}

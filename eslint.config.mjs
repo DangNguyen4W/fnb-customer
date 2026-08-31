@@ -5,7 +5,7 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-   {
+  {
     rules: {
       "no-console": ["error", { allow: ["warn", "error"] }],
       "no-unused-vars": "off",
@@ -19,7 +19,6 @@ const eslintConfig = defineConfig([
       "@typescript-eslint/no-unused-expressions": "off",
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/triple-slash-reference": "warn",
-      "tailwindcss/no-unnecessary-arbitrary-value": "off",
       "padding-line-between-statements": [
         "error",
         { blankLine: "always", prev: "const", next: "var" },
@@ -41,4 +40,3 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
-

@@ -1,0 +1,4 @@
+@theme inline {
+  --breakpoint-ds-tablet: 48rem;
+  --breakpoint-ds-desktop: 64rem;
+}

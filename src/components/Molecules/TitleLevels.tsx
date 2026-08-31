@@ -1,7 +1,6 @@
 import { cva, VariantProps } from "class-variance-authority";
-import { ReactNode } from "react";
-import { Typography } from "../Atoms/Typography";
 import { cn } from "@/lib/cn";
+import { Typography, TypoGraphyProps } from "../Atoms/Typography";
 
 const titleLevelsVariants = cva("", {
   variants: {
@@ -13,15 +12,18 @@ const titleLevelsVariants = cva("", {
       5: "text-ds-size-title-level-5",
       6: "text-ds-size-title-level-6",
     },
+    emphasis: {
+      default: "font-ds-w-default",
+      moderate: "font-ds-w-medium",
+      emphasized: "font-ds-w-semibold",
+      strong: "font-ds-w-bold",
+    },
   },
 });
 
 type TitleLevelsVariantProps = VariantProps<typeof titleLevelsVariants>;
 
 type TitleLevelsProps = {
-  children?: ReactNode;
-  className?: string;
-
   /**
    * Defines the semantic hierarchy of the title.
    *
@@ -34,11 +36,32 @@ type TitleLevelsProps = {
    * 6 → Smallest heading
    */
   level?: TitleLevelsVariantProps["level"];
-};
+  /**
+   * Visual weight of the heading.
+   *
+   * Corresponding weights:
+   * default -> 400 <-> font-ds-w-default
+   * moderate -> 500 <-> font-ds-w-medium
+   * emphasized -> 600 <-> font-ds-w-semibold
+   * strong -> 700 <-> font-ds-w-bold
+   *
+   * Use this together with level to define heading hierarchy.
+   */
+  emphasis?: TitleLevelsVariantProps["emphasis"];
+} & TypoGraphyProps;
 
-function TitleLevels({ children, level = 1, className }: TitleLevelsProps) {
+function TitleLevels({
+  children,
+  level = 1,
+  className,
+  emphasis = "moderate",
+  ...rest
+}: TitleLevelsProps) {
   return (
-    <Typography className={cn(titleLevelsVariants({ level, className }))}>
+    <Typography
+      {...rest}
+      className={cn(titleLevelsVariants({ level, className, emphasis }))}
+    >
       {children}
     </Typography>
   );

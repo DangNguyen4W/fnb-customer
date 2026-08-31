@@ -3,7 +3,7 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "../Atoms/InputGroup";
+} from "./InputGroup";
 
 function SearchBar() {
   return (
