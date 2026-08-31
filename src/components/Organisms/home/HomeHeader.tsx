@@ -17,7 +17,7 @@ function HomeHeader({ className, preventOverScroll }: HomeHeaderProps) {
       className={cn(
         "bg-ds-cl-bg-brand-primary-main rounded-b-ds-surface-lg p-ds-pd-surface text-ds-cl-text-base-inverse relative",
         {
-          "after:block after:absolute after:w-full after:top-0          after:translate-y-[calc(-100%+2px)] after:h-80 after:left-0 after:bg-inherit":
+          "after:block after:absolute after:w-full after:top-0 after:translate-y-[calc(-100%+2px)] after:h-80 after:left-0 after:bg-inherit":
             preventOverScroll,
         },
         className,

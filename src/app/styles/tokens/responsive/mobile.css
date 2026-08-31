@@ -9,10 +9,10 @@
   --res-radius-control-sm: var(--pre-radius-6);
   --res-radius-control: var(--pre-radius-9999);
   --res-radius-control-lg: var(--pre-radius-9999);
-  --res-radius-control-tiny-max: var(--pre-radius-4);
-  --res-radius-control-sm-max: var(--pre-radius-6);
-  --res-radius-control-max: var(--pre-radius-8);
-  --res-radius-control-lg-max: var(--pre-radius-12);
+  --res-radius-control-tiny-max: var(--pre-radius-8);
+  --res-radius-control-sm-max: var(--pre-radius-12);
+  --res-radius-control-max: var(--pre-radius-16);
+  --res-radius-control-lg-max: var(--pre-radius-36);
   --res-radius-item-tiny: var(--pre-radius-6);
   --res-radius-item-sm: var(--pre-radius-8);
   --res-radius-item: var(--pre-radius-12);
