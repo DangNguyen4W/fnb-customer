@@ -1,10 +1,6 @@
 import Image from "next/image";
-import { Button } from "../Atoms/Button";
-import { FlexBox, Position } from "../Atoms/FlexBox";
-import FlexBoxAddOn from "../Atoms/FlexBoxAddOn";
-import Icon from "../Atoms/Icon";
+import { FlexBox } from "../Atoms/FlexBox";
 import { PageLayout } from "../Layouts/PageLayout";
-import PageHeader from "../Organisms/PageHeader";
 import { ScrollArea } from "../Atoms/ScrollArea";
 import TitleLevels from "../Molecules/TitleLevels";
 import { Typography } from "../Atoms/Typography";
@@ -13,39 +9,27 @@ import { Badge } from "../Atoms/Badge";
 import { Textarea } from "../Atoms/TextArea";
 import { RadioGroup, RadioGroupItem } from "../Atoms/radio-group";
 import { Label } from "../Atoms/Label";
+import ProductDetailHeader from "../Organisms/product/ProductDetailHeader";
+import { cn } from "@/lib/cn";
 
 function ProductDetailScreen() {
   return (
-    <PageLayout
-      header={
-        <FlexBox col className="h-0">
-          <PageHeader
-            data-position={Position.FixedTopCenter}
-            withoutBack
-            className="z-ds-raised"
-          >
-            <Button layout={"icon"} variant={"secondary"}>
-              <Icon name="X" />
-            </Button>
-            <FlexBoxAddOn order={"last"} className="ml-auto">
-              <Button layout={"icon"} variant={"secondary"}>
-                <Icon name="Share" />
-              </Button>
-            </FlexBoxAddOn>
-          </PageHeader>
-        </FlexBox>
-      }
-    >
+    <PageLayout header={<ProductDetailHeader />}>
       <ScrollArea className={"size-full"}>
         <FlexBox col>
-          <div className="w-full aspect-[1.8] relative">
+          <div
+            className={cn(
+              "relative w-full aspect-[1.8] bg-ds-cl-bg-brand-secondary-main",
+              "after:block after:absolute after:w-full after:top-0 after:translate-y-[calc(-100%+2px)] after:h-80 after:left-0 after:bg-inherit after:-z-1",
+            )}
+          >
             <Image
               fill
               src="https://swiperjs.com/demos/images/abstract-1.jpg"
               alt=""
             />
           </div>
-          <FlexBox col className="p-ds-pd-page pb-ds-pd-b-page" gap={1}>
+          <FlexBox col className="p-ds-pd-page pb-ds-pd-b-page" gap={2}>
             <FlexBox className="items-center justify-between">
               <TitleLevels level={2}>Cheese Sizzling </TitleLevels>
               <TitleLevels level={2}>$15.00</TitleLevels>
