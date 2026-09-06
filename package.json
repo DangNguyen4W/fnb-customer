@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "lint-stated": "eslint {staged_files}",
+    "lint:fix": "eslint --fix",
     "test": "vitest run",
     "prepare": "lefthook install"
   },
