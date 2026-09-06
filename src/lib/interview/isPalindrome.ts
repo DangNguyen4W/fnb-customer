@@ -17,4 +17,4 @@ export const testPalindrome = () => {
   console.log("racecar", isPalindrome("racecar")); // true
 };
 
-isPalindrome(123);
+// isPalindrome(1223);
