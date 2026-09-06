@@ -8,6 +8,9 @@ interface User {
 
 
 
+
+
+
 async function fetchUser(id: number): Promise<User> {
   const name = faker.person.firstName();
   const delay = Math.random() * 1000;
