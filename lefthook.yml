@@ -13,5 +13,5 @@ commit-msg:
 
 pre-push:
   jobs:
-    - name: test staged files
+    - name: test
       run: npm run test
