@@ -1,8 +1,14 @@
 pre-commit:
   parallel: true
   jobs:
-    - run: npm run lint -- {staged_files}
+    - name: lint checking
+      run: npm run lint -- {staged_files}
       glob: "*.{js,ts,jsx,tsx}"
+
+commit-msg:
+  jobs:
+    - name: commit message checking
+      run: npx commitlint --edit {1}
 
 # pre-push:
 #   jobs:
