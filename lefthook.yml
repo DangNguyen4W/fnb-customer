@@ -1,6 +1,10 @@
 pre-commit:
   parallel: true
   jobs:
+    - name: type checking
+      run: npm run type-check
+      glob: "*.{ts,tsx}"
+      stage_fixed: true
     - name: lint checking
       run: npm run lint:fix -- {staged_files}
       glob: "*.{js,ts,jsx,tsx}"
