@@ -1,10 +1,10 @@
 pre-commit:
   parallel: true
-  staged_fixed: true
   jobs:
     - name: lint checking
       run: npm run lint:fix -- {staged_files}
       glob: "*.{js,ts,jsx,tsx}"
+      stage_fixed: true
 
 commit-msg:
   jobs:
