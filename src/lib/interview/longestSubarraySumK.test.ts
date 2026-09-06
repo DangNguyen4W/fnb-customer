@@ -13,7 +13,7 @@ describe("Test longestSubarraySumK", () => {
     [[1, -1, 1, -1, 1], 0, 4],
     [[3], 3, 1],
     [[-1, -1, -1, 1, 1], -1, 5],
-    [[1, 2, -2, 4, -4], 0, 41],
+    [[1, 2, -2, 4, -4], 0, 4],
   ])("Array: %j, k: %i -> output: %i", (array, k, output) => {
     expect(longestSubarraySumK(array, k)).toBe(output);
   });
