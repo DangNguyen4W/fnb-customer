@@ -1,37 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Secret Scanning
 
-## Getting Started
+This project uses [gitleaks](https://github.com/gitleaks/gitleaks) to block commits containing secrets (API keys, tokens, credentials...) before they reach git history.
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| OS      | Command                                                                            |
+| ------- | ---------------------------------------------------------------------------------- |
+| macOS   | `brew install gitleaks`                                                            |
+| Windows | `scoop install gitleaks`                                                           |
+| Linux   | See [official installation guide](https://github.com/gitleaks/gitleaks#installing) |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### How it works
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The `secret-scan` job runs on every `pre-commit`, scanning staged changes only (`gitleaks protect --staged`). If gitleaks is not installed, the hook fails with an install guide link.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Project-specific configuration
 
-## Learn More
+Custom rules and allowlist entries live in `.gitleaks.toml` at the repo root. Update this file when:
 
-To learn more about Next.js, take a look at the following resources:
+- A false positive blocks a legitimate commit (test fixtures, mock secrets)
+- A new secret pattern specific to this project needs detection (internal API key format, etc.)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# fnb-customer
+<!--
+MAINTENANCE NOTE:
+This heading ("## Secret Scanning") is referenced by an anchor link in `lefthook.yml`
+(job: secret-scan, error message when gitleaks is not installed).
+If you rename or remove this heading, update the corresponding anchor in `lefthook.yml`
+to keep the "Remote guide" link working.
+-->
