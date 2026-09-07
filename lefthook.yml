@@ -6,9 +6,9 @@ pre-commit:
   jobs:
     - name: guard-protected-branch
       run: |
+        source "$(git rev-parse --show-toplevel)/.lefthook/protected-branches.sh"
         BRANCH=$(git rev-parse --abbrev-ref HEAD)
-        PROTECTED="^(main|master|production|staging|sandbox|develop)$"
-        if echo "$BRANCH" | grep -qE "$PROTECTED"; then
+        if echo "$BRANCH" | grep -qE "^(${PROTECTED_PATTERN})$"; then
           echo "🚫 Direct commit to '$BRANCH' is not allowed. Create a feature branch instead."
           exit 1
         fi
