@@ -1,6 +1,18 @@
 pre-commit:
   parallel: true
+  skip:
+    - merge
+    - rebase
+
   jobs:
+    - name: branch protection
+      run: |
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        PROTECTED="^(main|master|production|staging|sandbox|develop)$"
+        if echo "$BRANCH" | grep -qE "$PROTECTED"; then
+          echo "🚫 Direct commit to '$BRANCH' is not allowed. Create a feature branch instead."
+          exit 1
+        fi
     - name: type checking
       run: npm run type-check
       glob: "*.{ts,tsx}"
@@ -9,7 +21,6 @@ pre-commit:
       run: npm run lint:fix -- {staged_files}
       glob: "*.{js,ts,jsx,tsx}"
       stage_fixed: true
-
 commit-msg:
   jobs:
     - name: commit message checking
@@ -17,5 +28,14 @@ commit-msg:
 
 pre-push:
   jobs:
+    - name: branch protection
+      run: |
+        PROTECTED="^refs/heads/(main|master|production|staging|sandbox|develop)$"
+        while read local_ref local_sha remote_ref remote_sha; do
+          if echo "$remote_ref" | grep -qE "$PROTECTED"; then
+            echo "🚫 Push directly to '$remote_ref' is not allowed. Open a Pull Request instead."
+            exit 1
+          fi
+        done
     - name: test
       run: npm run test
