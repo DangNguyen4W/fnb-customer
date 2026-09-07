@@ -1,5 +1,6 @@
-/* eslint-disable no-console */
-const findFirstUniqueCharacter = (sampleString: string): string | null => {
+export const findFirstUniqueCharacter = (
+  sampleString: string,
+): string | null => {
   const existTimesCount = new Map<string, number>();
   const length = sampleString.length;
   for (let i = 0; i < length; i++) {
@@ -16,12 +17,4 @@ const findFirstUniqueCharacter = (sampleString: string): string | null => {
     [...existTimesCount.entries()].find(([_, value]) => value === 1)?.[0] ??
     null
   );
-};
-
-export const testFindFirstUniqueCharacter = () => {
-  console.log(findFirstUniqueCharacter("leetcode")); // "l"
-  console.log(findFirstUniqueCharacter("loveleetcode")); // "v"
-  console.log(findFirstUniqueCharacter("aabb")); // null
-  console.log(findFirstUniqueCharacter("")); // null
-  console.log(findFirstUniqueCharacter("aabccde")); // "b"
 };

@@ -29,6 +29,7 @@
   /* Color / Background */
   --color-ds-cl-bg-base-none: var(--theme-base-transparent);
   --color-ds-cl-bg-base-default: var(--theme-base-inverse);
+  --color-ds-cl-bg-base-sub: var(--theme-neutral-50);
   --color-ds-cl-bg-base-disabled: var(--theme-neutral-100);
   --color-ds-cl-bg-base-inverse: var(--theme-base-primary);
 

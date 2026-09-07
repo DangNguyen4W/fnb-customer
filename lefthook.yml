@@ -1,0 +1,57 @@
+pre-commit:
+  parallel: true
+  skip:
+    - merge
+    - rebase
+  jobs:
+    - name: guard-protected-branch
+      run: |
+        source "$(git rev-parse --show-toplevel)/.lefthook/protected-branches.sh"
+        PROTECTED="^(${PROTECTED_PATTERN})$"
+        BRANCH=$(git rev-parse --abbrev-ref HEAD)
+        if echo "$BRANCH" | grep -qE "$PROTECTED"; then
+          echo "🚫 Direct commit to '$BRANCH' is not allowed. Create a feature branch instead."
+          exit 1
+        fi
+    - name: secret-scan
+      run: |
+        # NOTE: if you rename "## Secret Scanning" heading in README, update the anchor below
+        if ! command -v gitleaks &> /dev/null; then
+          REMOTE_URL=$(git config --get remote.origin.url)
+          REPO_WEB_URL=$(echo "$REMOTE_URL" | sed -E 's#git@([^:]+):#https://\1/#; s#\.git$##')
+
+          echo "❌ gitleaks is not installed."
+          echo "📖 Local guide  : file://$(git rev-parse --show-toplevel)/README.md#secret-scanning"
+          echo "📖 Remote guide : ${REPO_WEB_URL}#secret-scanning"
+          exit 1
+        fi
+        gitleaks protect --staged --verbose --redact
+    - name: typecheck
+      run: npm run type-check
+      glob: "*.{ts,tsx}"
+
+    - name: lint-fix
+      run: npm run lint:fix -- {staged_files}
+      glob: "*.{js,ts,jsx,tsx}"
+      stage_fixed: true
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: npx commitlint --edit {1}
+
+pre-push:
+  jobs:
+    - name: guard-protected-branch
+      use_stdin: true
+      run: |
+        source "$(git rev-parse --show-toplevel)/.lefthook/protected-branches.sh"
+        PROTECTED="^refs/heads/(${PROTECTED_PATTERN})$"
+        while read local_ref local_sha remote_ref remote_sha; do
+          if echo "$remote_ref" | grep -qE "$PROTECTED"; then
+            echo "🚫 Push directly to '$remote_ref' is not allowed. Open a Pull Request instead."
+            exit 1
+          fi
+        done
+
+    - name: test
+      run: npm run test
