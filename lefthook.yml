@@ -18,12 +18,10 @@ pre-commit:
         if ! command -v gitleaks &> /dev/null; then
           REMOTE_URL=$(git config --get remote.origin.url)
           REPO_WEB_URL=$(echo "$REMOTE_URL" | sed -E 's#git@([^:]+):#https://\1/#; s#\.git$##')
-          DEFAULT_BRANCH=$(git remote show origin 2>/dev/null | grep 'HEAD branch' | cut -d' ' -f5)
-          DEFAULT_BRANCH=${DEFAULT_BRANCH:-main}
 
           echo "❌ gitleaks is not installed."
           echo "📖 Local guide  : file://$(git rev-parse --show-toplevel)/README.md#secret-scanning"
-          echo "📖 Remote guide : ${REPO_WEB_URL}/blob/${DEFAULT_BRANCH}/README.md#secret-scanning"
+          echo "📖 Remote guide : ${REPO_WEB_URL}#secret-scanning"
           exit 1
         fi
         gitleaks protect --staged --verbose --redact
