@@ -19,7 +19,6 @@ async function fetchUser(id: number): Promise<User> {
       resolve({ id, name });
     }, delay);
   });
-  //
 }
 
 async function fetchUserNames(ids: number[]): Promise<string[]> {
