@@ -16,6 +16,9 @@ pre-commit:
     - name: check-env-example
       glob: "{src/env.ts,.env.example}"
       run: sh "$(git rev-parse --show-toplevel)/.lefthook/check-env-example.sh"
+    - name: check-ci-env
+      glob: "{src/env.ts,.github/workflows/ci.yml}"
+      run: sh "$(git rev-parse --show-toplevel)/.lefthook/check-ci-env.sh"
     - name: secret-scan
       run: |
         # NOTE: if you rename "## Secret Scanning" heading in README, update the anchor below

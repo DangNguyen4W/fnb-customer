@@ -59,11 +59,14 @@ jobs:
 
       - run: npm ci
 
+      - name: Check CI env sync
+        run: sh .lefthook/check-ci-env.sh
+
       - run: npm run build
         env:
           BE_DOMAIN_DOMAIN: ${{ secrets.BE_DOMAIN_DOMAIN }}
           IMAGE_DOMAIN_DOMAIN: ${{ secrets.IMAGE_DOMAIN_DOMAIN }}
-          SELF_DOMAIN: ${{ vars.SELF_DOMAIN }}
+          SELF_DOMAIN: ${{ vars.SELF_DOMAIN_TEST }}
 
   secret-scan:
     runs-on: ubuntu-latest
