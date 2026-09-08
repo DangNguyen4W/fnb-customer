@@ -3,10 +3,10 @@ import z from "zod";
 
 export const env = createEnv({
   server: {
-    SERVER_DOMAIN: z.string(),
+    SELF_DOMAIN: z.string(),
   },
   client: {},
   runtimeEnv: {
-    SERVER_DOMAIN: process.env.SERVER_DOMAIN,
+    SELF_DOMAIN: process.env.SELF_DOMAIN,
   },
 });
