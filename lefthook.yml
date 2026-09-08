@@ -14,7 +14,7 @@ pre-commit:
           exit 1
         fi
     - name: check-env-example
-      glob: "src/env.ts|.env.example"
+      glob: "{src/env.ts,.env.example}"
       run: sh "$(git rev-parse --show-toplevel)/.lefthook/check-env-example.sh"
     - name: secret-scan
       run: |
