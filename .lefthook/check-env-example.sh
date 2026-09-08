@@ -13,20 +13,20 @@ EXAMPLE_KEYS=$(grep -oE '^[A-Z_]+' "$EXAMPLE_FILE" | sort -u)
 MISSING=""
 for key in $SCHEMA_KEYS; do
   if ! echo "$EXAMPLE_KEYS" | grep -qx "$key"; then
-    MISSING="$MISSING $key"
+    MISSING="$MISSING \n$key"
   fi
 done
 
 EXTRA=""
 for key in $EXAMPLE_KEYS; do
   if ! echo "$SCHEMA_KEYS" | grep -qx "$key"; then
-    EXTRA="$EXTRA $key"
+    EXTRA="$EXTRA \n$key"
   fi
 done
 
 if [ -n "$MISSING" ] || [ -n "$EXTRA" ]; then
   echo "🚫 $EXAMPLE_FILE is out of sync with $ENV_FILE:"
-  [ -n "$MISSING" ] && echo "   Add to .env.example:$MISSING"
+  [ -n "$MISSING" ] && echo "   Add to .env.example:\n$MISSING"
   [ -n "$EXTRA" ] && echo "   Remove from .env.example (no longer in env.ts):$EXTRA"
   exit 1
 fi
