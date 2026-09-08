@@ -1,7 +1,11 @@
+import { env } from "@/env";
 import { ScrollArea } from "../Atoms/ScrollArea";
 import { PageLayout } from "../Layouts/PageLayout";
 import HomeHeader from "../Organisms/home/HomeHeader";
 import HomeMain from "../Organisms/home/HomeMain";
+
+env.BE_DOMAIN_DOMAIN;
+console.error("🚀 ~ env:", env);
 
 function HomeScreen() {
   return (

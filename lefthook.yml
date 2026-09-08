@@ -13,6 +13,10 @@ pre-commit:
           echo "🚫 Direct commit to '$BRANCH' is not allowed. Create a feature branch instead."
           exit 1
         fi
+    - name: check-env-example
+      glob: "{src/env.ts,.env.example}"
+      run: sh "$(git rev-parse --show-toplevel)/.lefthook/check-env-example.sh"
+
     - name: secret-scan
       run: |
         # NOTE: if you rename "## Secret Scanning" heading in README, update the anchor below
