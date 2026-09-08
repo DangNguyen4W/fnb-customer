@@ -13,6 +13,16 @@ pre-commit:
           echo "🚫 Direct commit to '$BRANCH' is not allowed. Create a feature branch instead."
           exit 1
         fi
+    - name: check-env-example
+      run: |
+        if [ -f .env ] && [ -f .env.example ]; then
+          MISSING=$(comm -23 <(grep -oE '^[A-Z_]+' .env | sort) <(grep -oE '^[A-Z_]+' .env.example | sort))
+          if [ -n "$MISSING" ]; then
+            echo "⚠️  Variables in .env but missing from .env.example: $MISSING"
+            echo "   Update .env.example so other developers know this variable is needed."
+            exit 1
+          fi
+        fi
     - name: secret-scan
       run: |
         # NOTE: if you rename "## Secret Scanning" heading in README, update the anchor below
