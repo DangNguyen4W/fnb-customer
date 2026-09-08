@@ -30,5 +30,4 @@ async function fetchUserNames(ids: number[]): Promise<string[]> {
 export const testFetch = async () => {
   const names = await fetchUserNames([1, 2, 5, 4]);
   console.log("🚀 ~ testFetch ~ names:", names);
-  //
 };
