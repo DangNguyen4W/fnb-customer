@@ -12,7 +12,8 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "test": "vitest run",
-    "type-check": "npx tsc --noEmit --incremental",
+    "typegen": "next typegen",
+    "type-check": "npm run typegen && tsc --noEmit --incremental",
     "prepare": "lefthook install"
   },
   "dependencies": {
